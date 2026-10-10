@@ -1,0 +1,5 @@
+'use client';
+import { motion } from 'motion/react';
+import { SectionHeading } from '@/components/SectionHeading';
+import { siteContent } from '@/content/portfolio';
+export function ReferenceAbout() { return <section id="about" className="section-shell section-pad"><SectionHeading index="01" title="About Me" subtitle="A designer’s eye with a developer’s precision."/><div className="about-grid"><motion.article className="bento bento--wide" initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}}><span className="card-label">PROFILE.md</span><h3>Designing clarity.<br/>Building with purpose.</h3><p>{siteContent.about[0]}</p><p>{siteContent.about[1]}</p></motion.article><article className="bento bento--quote"><span>“</span><p>Good interfaces feel obvious—after someone has done the hard thinking.</p></article><article className="bento bento--stack"><span className="card-label">CURRENT FOCUS</span><strong>React.js</strong><strong>UI systems</strong><strong>Creative frontend</strong></article></div></section>; }
